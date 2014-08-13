@@ -16,3 +16,9 @@ print_list(students, 'students')
 
 #Output names of cohorts
 puts students.keys
+
+#Increase cohort size by 5% and display results
+students.each do |key, value|
+  students[key] = value * 50 / 100.0
+end
+print_list(students, 'students')
