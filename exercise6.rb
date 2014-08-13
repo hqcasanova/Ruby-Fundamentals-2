@@ -1,5 +1,5 @@
 #Shopping list
-grocery_list = ['zuchinni', 'carrots', 'potatoes', 'green beans', 'leek', 'onion', 'garlic', 'sea salt']
+grocery_list = ['zuchinni', 'carrots', 'potatoes', 'salmon', 'green beans', 'leek', 'onion', 'garlic', 'sea salt']
 
 #Print out the list as a real list
 def print_list (list, print_total = true)
@@ -7,6 +7,7 @@ def print_list (list, print_total = true)
     puts "* " + element
   end
   puts 'The total number of items is ' + list.length.to_s if print_total
+  print "\n" 
 end
 
 #Adding rice and printing out
@@ -24,4 +25,8 @@ end
 puts "Second item in the list: " + grocery_list[1]
 
 #Display list in alphabetical order
-print_list(grocery_list.sort)
+print_list(grocery_list.sort!, false)
+
+#Remove salmon and redisplay
+grocery_list.delete('salmon')
+print_list(grocery_list, false)
