@@ -13,3 +13,6 @@ print_list(students, 'students')
 #Add pair (cohort4, 43)
 students[:cohort4] = 43
 print_list(students, 'students')
+
+#Output names of cohorts
+puts students.keys
