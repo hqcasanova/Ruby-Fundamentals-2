@@ -22,3 +22,6 @@ end
 
 #Display the second item
 puts "Second item in the list: " + grocery_list[1]
+
+#Display list in alphabetical order
+print_list(grocery_list.sort)
