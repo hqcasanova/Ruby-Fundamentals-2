@@ -19,10 +19,18 @@ puts students.keys
 
 #Increase cohort size by 5% and display results
 students.each do |key, value|
-  students[key] = value + (value * 50 / 100.0)
+  students[key] = value + (value * 50 / 100)
 end
 print_list(students, 'students')
 
+#Calculate total number of students that have gone through the program
+sum = 0
+students.each do |key, value|
+   sum = sum + value
+end
+puts "Total number of students throughout the life of program: #{sum} students"
+
 #Delete 2nd cohort and display results
 students.delete(:cohort2)
+puts "\nCohort2 is gone:"
 print_list(students, 'students')
